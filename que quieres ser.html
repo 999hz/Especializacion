@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especializaciones Unity Networks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('recursos/anaxes.jpg'); /* Imagen de fondo */
+            background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+            background-position: center; /* Centra la imagen */
+            background-attachment: fixed; /* Fija la imagen al fondo */
+            color: white; /* Cambia el color del texto a blanco para mayor contraste */
+            margin: 0; /* Elimina el margen por defecto */
+            height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+        }
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        .gallery img {
+            width: 400px;
+            height: 400px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .description-container {
+            display: none; /* Oculta el contenedor por defecto */
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad para ver la imagen de fondo */
+            color: black; /* Color del texto en la descripción */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px; /* Ancho máximo de la caja */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .title-box {
+            padding: 10px;
+            background-color: #800080; /* Color de fondo  morado */
+            color: black; /* Color del texto */
+            border-radius: 5px;
+            margin: 10px auto;
+            width: fit-content; /* Ajusta el ancho al contenido */
+            display: inline-block; /* Permite que el ancho se ajuste al contenido */
+        }
+        .button {
+        display: inline-block; /* Permite que el enlace se comporte como un botón */
+        padding: 10px 20px; /* Espaciado interno */
+        background-color: #800080; /* Color de fondo morado */
+        color: black; /* Color del texto negro */
+        text-decoration: none; /* Elimina el subrayado del enlace */
+        border-radius: 5px; /* Bordes redondeados */
+        font-weight: bold; /* Texto en negrita */
+        transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    }
+
+    .button:hover {
+        background-color: #6a006a; /* Color de fondo más oscuro al pasar el ratón */
+    }
+    </style>
+    <script>
+        function showDescription(id) {
+            const descriptions = document.querySelectorAll('.description-container');
+            descriptions.forEach(desc => desc.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+<h1 style="color: #be5aea;">Especializaciones Unity Network CWRP</h1>
+<div class="gallery">
+    <img src="recursos/Apoyo.jpg" alt="Apoyo" onclick="showDescription('apoyoDesc')">
+    <img src="recursos/Asalto.jpg" alt="Asalto" onclick="showDescription('asaltoDesc')">
+    <img src="recursos/Reconociemiento.jpg" alt="Reconocimiento" onclick="showDescription('reconocimientoDesc')">
+</div>
+
+<div id="apoyoDesc" class="description-container">
+    <div class="title-box"> <b> Apoyo </b> </div>
+    <br> <img src="recursos/logoso.jpg" alt="logoso" style="width: 100%; max-width: 90px; margin-top: 10px; border-radius: 10px;"> </br>
+    <p>El Apoyo es el militar responsable de pilotar vehículos tanto aéreos como terrestres. Además del papel de piloto, desempeña la función de soldado pesado.
+    El apoyo, en su calidad de soldado pesado, tiene un incremento de 30 de HP, aunque su limitada movilidad en comparación con las otras tropas es un inconveniente. 
+    El apoyo tiene la habilidad de arreglar los vehículos.
+
+El armamento con el que un apoyo cuenta en su gran mayoría siempre son armas con: Alta cadencia y daño moderado, poca cadencia y daño alto u explosivos. En la gran mayoría de los casos son armas las cuales ralentizan la movilidad del AP.
+las armas que manejan los apoyos son las siguientes: </p>
+<p> Z-2,Paradax y la RPS-6 </p>
+<a href="https://docs.google.com/document/d/1tdUWqFqgXyJO45N69u_aiTnVr0epLonQ6pjAoJcLjpk/edit?usp=sharing" class="button">Leer más</a>
+</div>
+
+<div id="asaltoDesc" class="description-container">
+    <div class="title-box"> <b> Asalto </b> </div>
+    <br> <img src="recursos/logo.jpg" alt="logo" style="width: 100%; max-width: 90px; margin-top: 10px; border-radius: 10px;"> </br>
+    <p>Los asaltos o clon medico son los encargados de curar y mantener con vida a las tropas, ya sean jedis clones o civiles. Estos cuentan con distintas herramientas que sirven para ser el medico de batalla en distintas circunstancias.</p>
+    <p> Dc </p>
+    <a href="https://docs.google.com/document/d/1tdUWqFqgXyJO45N69u_aiTnVr0epLonQ6pjAoJcLjpk/edit?usp=sharing" class="button">Leer más</a>
+</div>
+
+<div id="reconocimientoDesc" class="description-container">
+    <div class="title-box"> <b> Reconocimiento </b> </div>
+    <br> <img src="recursos/logososo.jpg" alt="logososo" style="width: 100%; max-width: 90px; margin-top: 10px; border-radius: 10px;"> </br>
+    <p>Son tropas especializadas en el uso de francotiradores y manejo de la Speeder "BARC", a su vez lo vas a ver siempre en lugares de altura y adelantándose en misiones de avanzada para darles una breve descripcion de lo que hay mas adelante
+    las armas tipicas de los recons y las recomendadas son: </p>
+    <p> Francotirador Pesado NT-242c, Escopeta Paradax y la Francotirador DC-15xs </p>
+    <a href="https://docs.google.com/document/d/1tdUWqFqgXyJO45N69u_aiTnVr0epLonQ6pjAoJcLjpk/edit?usp=sharing" class="button">Leer más</a>
+</div>
+</body>
+</html>
